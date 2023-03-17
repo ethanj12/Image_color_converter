@@ -1,4 +1,4 @@
-# Image_color_converter
+# Color Converter
 
 Input an image and then using a K Means Clustering Algorithm, develop an image with fewer colors than the original. 
 This project was inspired by pixel artisits who create complicated scenes from a very limited color pallete, like this image here:
