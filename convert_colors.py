@@ -2,9 +2,11 @@ import pandas as pd
 from PIL import Image, ImageCms
 from sklearn.cluster import KMeans
 
-
+#Name of the file that we want to convert
 name_of_file = "woman_with_lights.jpg"
+#The number of colors you want the image to be converted to
 NUM_OF_COLORS = 9
+#Replace the path to the original image to target folder
 picture = Image.open(
     f"C:/Users/ethan/Documents/Python/Color Converter/Images/{name_of_file}").convert("RGB")
 print(f"Size of Image: {picture.size[0]}x{picture.size[1]}")
@@ -35,6 +37,7 @@ for index in range(len(model.labels_)):
     picture.putpixel((x, y), tuple(colors[model.labels_[index]]))
     if (index % 100000 == 0):
         print(f"Number of Pixels Replaced: {index}")
-        
+
+#Replace below path with where you want the final image to be saved to
 picture.save(f"C:/Users/ethan/Documents/Python/Color Converter/Finished Images/Final_{name_of_file}")
 picture.show()
