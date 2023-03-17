@@ -17,7 +17,7 @@ for x in range(picture.size[0]):
         color = [r, g, b]
         simple_color_list.append(color)
 
-# Converts the list into a pandas dataframe for faster training in sklearn
+# Converts the list into a pandas dataframe for training in sklearn
 df_colors = pd.DataFrame(simple_color_list, columns=['R', 'G', 'B'])
 print("Starting Training")
 model = KMeans(n_clusters=NUM_OF_COLORS, n_init=10)
@@ -35,6 +35,6 @@ for index in range(len(model.labels_)):
     picture.putpixel((x, y), tuple(colors[model.labels_[index]]))
     if (index % 100000 == 0):
         print(f"Number of Pixels Replaced: {index}")
-picture.save(
-    f"C:/Users/ethan/Documents/Python/Color Converter/Finished Images/Final_{name_of_file}")
+        
+picture.save(f"C:/Users/ethan/Documents/Python/Color Converter/Finished Images/Final_{name_of_file}")
 picture.show()
