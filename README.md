@@ -13,7 +13,7 @@ Using the program, we can create pictures like this:
 
 <p align='center'>
 <pre>
-                         Before Algorithm:                                          After Algorithm:
+                         Before Algorithm:                                After Algorithm:
 </pre>
 </p>
 <p align="center"> 
